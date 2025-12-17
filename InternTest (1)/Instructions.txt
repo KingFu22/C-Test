@@ -1,0 +1,23 @@
+-- WPF Part --
+1. Execute the loading command on clicking the "Load" button
+2. Execute the export command on clicking the "Export" button
+3. Change the text of the "Load" Button to "Loading" while the data is loaded
+4. Display the loaded data in the left ListBox.
+5. On Selecting an instance in this list, display its "Properties" in the second ListBox
+6. For the first ListBox, display the name and the template name of each entity. The name shall be in bold.
+7. For the second ListBox, display the name, the value and the type of each entry. The name shall be in bold.
+8. Disable the Export button while data is still loading
+
+-- Data handling part --
+Use the loaded data ("SmartObjects") and export them as a CSV:
+1. For each row, the data of a SmartObject shall be displayed.
+2. The first column shall be the "Name" of the SmartObject
+3. The second column shall be the "TemplateName" of the SmartObject
+4. The following rows shall be aggregated by the different released properties of the SmartObjects
+  i.e. one column per unique property. Properties which do not exist for a SmartObject shall be left empty.
+5. Write the result to a file (can be hardcoded)
+Example output:
+  Name,Template,String length, Initial value,Min.set value,
+  InstanceA,SOT1,5,Other value,,
+  InstanceB, SOT2,,,5,
+  InstanceC,SOT1,5,Value,,
